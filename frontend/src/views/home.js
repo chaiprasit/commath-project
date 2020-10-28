@@ -5,7 +5,7 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 
 
-function Home() {
+function Main() {
   const navigate = useNavigate();
 
   const nextPage = (page) => {
@@ -13,33 +13,113 @@ function Home() {
   }
 
   return (
-    <div class="center">
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("BasicComputing")}} color="danger"><h5>1.Basic Computing</h5></Button><br/>
-        </div>
-        <br/>
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("LinearEquations")}} color="danger"><h5>2.Linear Equations</h5></Button><br/>
-        </div>
-        <br/>
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("Interpolation")}} color="danger"><h5>3.Interpolation</h5></Button><br/>
-        </div>
-        <br/>
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("Differentiation")}} color="danger"><h5>4.Differentiation</h5></Button><br/>
-        </div>
-        <br/>
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("Integration")}} color="danger"><h5>5.Integration</h5></Button><br/>
-        </div>
-        <br/>
-        <div class="text-center">
-        <Button onClick={()=>{nextPage("Rootfinding")}} color="danger"><h5>6.Root-finding</h5></Button><br/>
-        </div>
+    <div>
+      <h1 className="text-center" style={{ marginTop: "5%" }}>
+      1144311 Computational Mathematics
+      </h1>
+      <Row style={{ marginTop: "5%" }}>
+        <Col sm="3"></Col>
+
+        <Col sm="6">
+          <div className="text-center">
+            <Row>
+              <Col sm="6">
+              <Card style={{backgroundColor: ' #f6d327 ',backgroundImage:  'linear-gradient(315deg, #f6d327 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 1</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Basic Computing</h4>
+                  </CardText>
+                 
+                    <Button onClick={()=>{nextPage("BasicComputing")}}color="danger">
+                      <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                    </Button>
+                  
+                </Card>
+              </Col>
+
+              <Col sm="6">
+                <Card style={{backgroundColor: ' #f6d327 ',backgroundImage:  'linear-gradient(315deg, #f6d327 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 2</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Linear Equations</h4>
+                  </CardText>
+                  <Button onClick={()=>{nextPage("LinearEquations")}} color="danger">
+                    <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                  </Button>
+                </Card>
+              </Col>
+            </Row>
+
+            <Row className="text-center" style={{ marginTop: "20px" }}>
+              <Col sm="6">
+                <Card style={{backgroundColor: ' #fce043 ',backgroundImage:  'linear-gradient(315deg, #fce043 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 3</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Interpolation</h4>
+                  </CardText>
+                  <Button onClick={()=>{nextPage("Interpolation")}} color="danger">
+                    <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                  </Button>
+                </Card>
+              </Col>
+
+              <Col sm="6">
+                <Card style={{backgroundColor: ' #fce043 ',backgroundImage:  'linear-gradient(315deg, #fce043 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 4</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Differentiation</h4>
+                  </CardText>
+                  <Button onClick={()=>{nextPage("differentiation")}} color="danger">
+                    <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                  </Button>
+                </Card>
+              </Col>
+            </Row>
+
+
+            <Row className="text-center" style={{ marginTop: "20px" }}>
+              <Col sm="6">
+                <Card style={{backgroundColor: ' #fce043 ',backgroundImage:  'linear-gradient(315deg, #fce043 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 5</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Integration</h4>
+                  </CardText>
+                  <Button onClick={()=>{nextPage("integration")}} color="danger">
+                    <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                  </Button>
+                </Card>
+              </Col>
+
+              <Col sm="6">
+                <Card style={{backgroundColor: ' #fce043 ',backgroundImage:  'linear-gradient(315deg, #fce043 0%, #fb7ba2 74%)'}}>
+                  <CardTitle>
+                    <h3 style={{ marginTop: "10px" }}>บทที่ 6</h3>
+                  </CardTitle>
+                  <CardText>
+                    <h4>Root-finding</h4>
+                  </CardText>
+                  <Button onClick={()=>{nextPage("Rootfinding")}} color="danger">
+                    <h3 style={{ marginTop: "10px" }}>เริ่ม</h3>
+                  </Button>
+                </Card>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col sm="3"></Col>
+      </Row>
     </div>
   );
 }
 
-
-export default Home;
+export default Main;
